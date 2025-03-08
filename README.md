@@ -48,82 +48,51 @@ The dataset used for this project is the **UCI Credit Card dataset**, obtained f
 
 ---
 
-## ⚙️ Installation  
-To set up and run this project on your local machine, follow these steps:  
+## 🚀 Setup Guide  
 
-## 🚀 Setup Guide
-
-### 1️⃣. Clone the repository:
+**1️⃣ Clone the repository:**  
 ```bash
 git clone https://github.com/emekafelix243/Credit-card-default-prediction.git
 cd Credit-card-default-prediction
-2️⃣. Create a virtual environment & install dependencies:
+
+2️⃣ Create a virtual environment & install dependencies:
 bash
-Copy
-Edit
 python -m venv env
 source env/bin/activate  # On Mac/Linux
 env\Scripts\activate     # On Windows
 
 pip install -r requirements.txt
-3️⃣. Run the pipeline (Execute all Jupyter Notebooks in sequence):
-bash
-Copy
-Edit
-python run_pipeline.py
-4️⃣. (Optional) Run Flask Deployment:
-bash
-Copy
-Edit
-cd flask_app
-python app.py
-Then, visit http://127.0.0.1:5000/ in your browser.
-
-pip install -r requirements.txt
-### 1️.	Clone the repository:
-```bash
-git clone https://github.com/emekafelix243/Credit-card-default-prediction.git
-cd Credit-card-default-prediction
-
-### 2️.	Create a virtual environment & install dependencies:
-```bash
-python -m venv env
-source env/bin/activate  # On Mac/Linux
-env\Scripts\activate     # On Windows
-
-pip install -r requirements.txt
-
-### 3️.	Run the pipeline (Execute all Jupyter Notebooks in sequence)
+3️⃣ Run the pipeline (Execute all Jupyter Notebooks in sequence):
 bash
 python run_pipeline.py
 
-### 4️.	Optional) Run Flask Deployment:
+4️⃣ (Optional) Run Flask Deployment:
 bash
-
 cd flask_app
-python app.py
+python fraud.py
+
 Then, visit http://127.0.0.1:5000/ in your browser.
 
-## 📌 Conclusion
+📌 Conclusion
 The objective of predicting credit card payment defaults was analyzed using Logistic Regression, Random Forest, and XGBoost models. Below are the key takeaways:
 
 ## 📊 Model Performance Summary  
 
-| **Model**              | **✅ Strengths**                                | **❌ Weaknesses**                              |
-|------------------------|-----------------------------------------------|-----------------------------------------------|
-| **Logistic Regression** | ✅ High recall for non-defaults **(0.97)**    | ❌ Poor recall for defaults **(0.24)**        |
-|                        | ✅ AUC-ROC score: **0.7103**                   | ❌ Misses many defaulting customers           |
-| **Random Forest**      | ✅ Improved recall for defaults **(0.35)**     | ❌ Still struggles with default recall        |
-|                        | ✅ Better AUC-ROC score **(0.7750)**           | ❌ Slightly more false positives              |
-| **XGBoost**           | ✅ Best AUC-ROC score **(0.7795)**             | ❌ Recall for defaults remains low **(0.37)** |
-|                        | ✅ Improved precision for defaults **(0.61)**  | ❌ Slightly better than Random Forest         |
+| **Model**               | **✅ Strengths**                                 | **❌ Weaknesses**                          |
+|-------------------------|------------------------------------------------|----------------------------------------------|
+| **Logistic Regression** | ✅ High recall for non-defaults (**0.97**)     | ❌ Poor recall for defaults (**0.24**)      |
+|                         | ✅ AUC-ROC score: **0.7103**                    | ❌ Misses many defaulting customers         |
+| **Random Forest**       | ✅ Improved recall for defaults (**0.35**)     | ❌ Still struggles with default recall      |
+|                         | ✅ Better AUC-ROC score (**0.7750**)           | ❌ Slightly more false positives            |
+| **XGBoost**             | ✅ Best AUC-ROC score (**0.7795**)             | ❌ Recall for defaults remains low (**0.37**) |
+|                         | ✅ Improved precision for defaults (**0.61**)  | ❌ Slightly better than Random Forest       |
 
-## 🔑 Key Insights
+🔑 Key Insights
 1️⃣ All models effectively identify non-defaulting customers but struggle with recall for defaults, which is critical for mitigating credit risk.
+2️⃣ XGBoost performs the best overall, but further optimization is required to improve default detection.
 
-2️⃣ XGBoost performs the best overall, but further optimization is required to improve default
+🚀 Next Steps
+🔹 Explore hyperparameter tuning to optimize model performance.
+🔹 Experiment with deep learning models (e.g., Neural Networks).
+🔹 Develop real-time fraud detection pipelines for better responsiveness.
 
-## 🚀 Next Steps  
-🔹 **Explore hyperparameter tuning** to optimize model performance.  
-🔹 **Experiment with deep learning models** (e.g., Neural Networks).  
-🔹 **Develop real-time fraud detection pipelines** for better responsiveness.  
