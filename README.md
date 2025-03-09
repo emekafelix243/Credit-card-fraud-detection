@@ -58,8 +58,11 @@ cd Credit-card-default-prediction
 bash
 
 python -m venv env
+
 source env/bin/activate  # On Mac/Linux
+
 env\Scripts\activate     # On Windows
+
 pip install -r requirements.txt
 
 3️⃣ Run the pipeline (Execute all Jupyter Notebooks in sequence):
