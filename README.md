@@ -96,12 +96,19 @@ The objective of predicting credit card payment defaults was analyzed using Logi
 | **XGBoost**             | ✅ Best AUC-ROC score (**0.7795**)             | ❌ Recall for defaults remains low (**0.37**) |
 |                         | ✅ Improved precision for defaults (**0.61**)  | ❌ Slightly better than Random Forest       |
 
-🔑 Key Insights
+
+## 🔑 Key Insights
+
 1️⃣ All models effectively identify non-defaulting customers but struggle with recall for defaults, which is critical for mitigating credit risk.
+
 2️⃣ XGBoost performs the best overall, but further optimization is required to improve default detection.
 
-🚀 Next Steps
+
+## 🚀 Next Steps
+
 🔹 Explore hyperparameter tuning to optimize model performance.
+
 🔹 Experiment with deep learning models (e.g., Neural Networks).
+
 🔹 Develop real-time fraud detection pipelines for better responsiveness.
 
