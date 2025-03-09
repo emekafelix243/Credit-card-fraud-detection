@@ -46,34 +46,43 @@ The dataset used for this project is the **UCI Credit Card dataset**, obtained f
 ✔ **Credit History:** `LIMIT_BAL`, `PAY_0` to `PAY_6` (payment history for six months)  
 ✔ **Transaction Details:** `BILL_AMT1` to `BILL_AMT6` (bill amounts), `PAY_AMT1` to `PAY_AMT6` (payment amounts)  
 
----
 
-## 🚀 Setup Guide  
+## 🚀 Setup Guide
 
-**1️⃣ Clone the repository:**  
-```bash
+1️⃣ Clone the repository:
+
 git clone https://github.com/emekafelix243/Credit-card-default-prediction.git
 cd Credit-card-default-prediction
 
 2️⃣ Create a virtual environment & install dependencies:
 bash
+
 python -m venv env
 source env/bin/activate  # On Mac/Linux
 env\Scripts\activate     # On Windows
-
 pip install -r requirements.txt
+
 3️⃣ Run the pipeline (Execute all Jupyter Notebooks in sequence):
-bash
+
 python run_pipeline.py
 
 4️⃣ (Optional) Run Flask Deployment:
-bash
+
 cd flask_app
 python fraud.py
 
 Then, visit http://127.0.0.1:5000/ in your browser.
 
-📌 Conclusion
+## 🚀 API Endpoints
+
+If running the Flask application, the following API endpoints are available:
+
+/ → Home page
+
+/predict (POST) → Predicts default status based on input transaction data
+
+
+## 📌 Conclusion
 The objective of predicting credit card payment defaults was analyzed using Logistic Regression, Random Forest, and XGBoost models. Below are the key takeaways:
 
 ## 📊 Model Performance Summary  
