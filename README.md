@@ -30,7 +30,9 @@ The primary goal of this project is to develop a **robust fraud detection model*
 
 ## 📊 Dataset Overview  
 
-The dataset used for this project is the **UCI Credit Card dataset**, obtained from the **UCI Machine Learning Repository**. It consists of **customer credit card transaction history** and **financial attributes** from Taiwan between **April 2005 and September 2005**.  
+The dataset used for this project is the **UCI Credit Card dataset**, obtained from the **UCI Machine Learning Repository**. It consists of **customer credit card transaction history** and **financial attributes** from Taiwan between **April 2005 and September 2005**.  This can be downloaded through 
+**https://archive.ics.uci.edu/dataset/350/default+of+credit+card+clients**
+
 
  ## 🔍 Dataset Information:  
 
