@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Fraud Detection</title>
+</head>
+<body>
+    <h1>Credit Card Fraud Detection</h1>
+    <p>Enter transaction details to predict fraud:</p>
+
+    <form action="/predict" method="post">
+        <label for="model">Select Model:</label>
+        <select name="model">
+            <option value="logistic">Logistic Regression</option>
+            <option value="rf">Random Forest</option>
+            <option value="xgb">XGBoost</option>
+        </select>
+
+        <br><br>
+
+        {% for feature in [
+            "LIMIT_BAL", "SEX", "EDUCATION", "MARRIAGE", "AGE",
+            "PAY_0", "PAY_2", "PAY_3", "PAY_4", "BILL_AMT4",
+            "BILL_AMT5", "BILL_AMT6", "PAY_AMT1", "PAY_AMT2",
+            "PAY_AMT3", "PAY_AMT4", "PAY_AMT5", "PAY_AMT6"
+        ] %}
+            <label>{{ feature }}</label>
+            <input type="text" name="{{ feature }}" required><br>
+        {% endfor %}
+
+        <br>
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>
